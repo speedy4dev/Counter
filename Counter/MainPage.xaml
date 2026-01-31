@@ -1,0 +1,16 @@
+<Page x:Class="Counter.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="using:Counter"
+      Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+  <ScrollViewer IsTabStop="True">
+    <Grid HorizontalAlignment="Center">
+      <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Image Source="Assets/SpeedySilhouette_Main.png" Margin="12" Height="150" Width="150" />
+        <TextBox Text="{Binding Path=Countable.Step, Mode=TwoWay}" HorizontalAlignment="Center" Margin="12" TextAlignment="Center" PlaceholderText="Step Size" />
+        <TextBlock HorizontalAlignment="Center" Margin="12" TextAlignment="Center" Text="{Binding Countable.Count}" />
+        <Button Command="{Binding IncrementCounter}" Content="Increment Counter by Step " Style="{StaticResource ButtonRevealStyle}" HorizontalAlignment="Center" Margin="12" />
+      </StackPanel>
+    </Grid>
+  </ScrollViewer>
+</Page>
